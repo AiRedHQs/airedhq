@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Nunito', sans-serif;
   background-color: #0f0f1c;
@@ -102,14 +105,23 @@ h2 {
   margin: 40px 20px;
 }
 
-/* Dark Overlay for Better Text Contrast */
+/* Section Background Enhancer */
 .section-bg {
-  background-color: rgba(0, 0, 0, 0.4); /* adds contrast over bright background */
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 .section-bg h2 {
   color: #4ec8f0;
+}
+
+/* Section Illustrations */
+.section-img {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
 }
 
 /* Services Grid */
