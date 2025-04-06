@@ -11,6 +11,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -18,7 +21,7 @@
   <!-- Animated Tech Background -->
   <div id="animated-background"></div>
 
-  <!-- Sticky Navbar with Logo and Menu -->
+  <!-- Sticky Navbar -->
   <header class="navbar">
     <div class="nav-container">
       <img src="Logo 2X1 Transparent.png" alt="AiredHQ Logo" class="nav-logo" />
@@ -39,9 +42,10 @@
   </section>
 
   <!-- About Section -->
-  <section class="about glass section-bg" id="about">
+  <section class="about glass section-bg" id="about" data-aos="fade-up">
     <div class="container">
       <h2>About Us</h2>
+      <img src="https://undraw.co/api/illustrations/6d9c9904-c8bc-4db8-9010-34f1613f13fc" alt="About Illustration" class="section-img"/>
       <p>
         AiredHQ is a cutting-edge tech company specializing in immersive AR/VR solutions, innovative web & mobile applications, and future-driven consulting. We help businesses build smart, scalable products that elevate the user experience and drive growth.
       </p>
@@ -49,7 +53,7 @@
   </section>
 
   <!-- Services Section -->
-  <section class="services glass section-bg" id="services">
+  <section class="services glass section-bg" id="services" data-aos="fade-up">
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-grid">
@@ -82,7 +86,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact glass section-bg" id="contact">
+  <section class="contact glass section-bg" id="contact" data-aos="fade-up">
     <div class="container">
       <h2>Contact Us</h2>
       <form action="https://formspree.io/f/your-form-id" method="POST">
@@ -107,9 +111,10 @@
     </div>
   </footer>
 
-  <!-- Animated Background Scripts -->
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     VANTA.WAVES({
       el: "#animated-background",
@@ -118,6 +123,11 @@
       waveHeight: 20,
       waveSpeed: 1,
       zoom: 1
+    });
+
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
 </body>
