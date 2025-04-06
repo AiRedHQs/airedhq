@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
   background-color: #0f0f1c;
   color: white;
   line-height: 1.6;
@@ -27,12 +27,6 @@ h2 {
   font-size: 2rem;
 }
 
-/* Favicon (doesn't need style, just here for reference) */
-link[rel="icon"] {
-  width: 16px;
-  height: 16px;
-}
-
 /* Navbar */
 .navbar {
   position: sticky;
@@ -45,10 +39,24 @@ link[rel="icon"] {
 .nav-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .nav-logo {
   height: 40px;
   width: auto;
+}
+.nav-menu {
+  display: flex;
+  gap: 25px;
+}
+.nav-menu a {
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+.nav-menu a:hover {
+  color: #4ec8f0;
 }
 
 /* Animated Background */
@@ -83,7 +91,7 @@ link[rel="icon"] {
   background-color: #e6e6e6;
 }
 
-/* Glass Sections */
+/* Glass Section Containers */
 .glass {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -92,6 +100,16 @@ link[rel="icon"] {
   backdrop-filter: blur(10px);
   box-shadow: 0 0 25px rgba(0,0,0,0.15);
   margin: 40px 20px;
+}
+
+/* Dark Overlay for Better Text Contrast */
+.section-bg {
+  background-color: rgba(0, 0, 0, 0.4); /* adds contrast over bright background */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.section-bg h2 {
+  color: #4ec8f0;
 }
 
 /* Services Grid */
@@ -131,6 +149,7 @@ input, textarea {
   border-radius: 5px;
   border: none;
   resize: none;
+  font-family: 'Nunito', sans-serif;
 }
 button[type="submit"] {
   margin-top: 15px;
