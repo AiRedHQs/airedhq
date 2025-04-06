@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AiredHQ</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar with Logo -->
+  <!-- Animated Tech Background -->
+  <div id="animated-background"></div>
+
+  <!-- Sticky Navbar with Logo -->
   <header class="navbar">
     <div class="nav-container">
       <img src="Logo 2X1 Transparent.png" alt="AiredHQ Logo" class="nav-logo" />
@@ -38,12 +42,30 @@
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-grid">
-        <div class="service">🕶️ AR/VR Development</div>
-        <div class="service">📱 Mobile App Development</div>
-        <div class="service">💻 Web Development</div>
-        <div class="service">🧠 Technology Consulting</div>
-        <div class="service">🚀 Product Strategy</div>
-        <div class="service">🎨 UI/UX Design</div>
+        <div class="service-card">
+          <h3>🕶️ AR/VR Development</h3>
+          <p>Create immersive environments and mixed reality experiences for real-world applications.</p>
+        </div>
+        <div class="service-card">
+          <h3>📱 Mobile App Development</h3>
+          <p>Build powerful cross-platform apps that scale and perform flawlessly on iOS and Android.</p>
+        </div>
+        <div class="service-card">
+          <h3>💻 Web Development</h3>
+          <p>Develop responsive, high-performance websites tailored to your brand and business goals.</p>
+        </div>
+        <div class="service-card">
+          <h3>🧠 Technology Consulting</h3>
+          <p>Expert guidance to align technology with your business vision and objectives.</p>
+        </div>
+        <div class="service-card">
+          <h3>🚀 Product Strategy</h3>
+          <p>From idea to launch, our strategic approach helps shape and validate digital products.</p>
+        </div>
+        <div class="service-card">
+          <h3>🎨 UI/UX Design</h3>
+          <p>Design intuitive user experiences and interfaces that people love to use.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -52,7 +74,18 @@
   <section class="contact glass" id="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Let’s build something amazing. Reach us at <a href="mailto:info@airedhq.com">info@airedhq.com</a></p>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
     </div>
   </section>
 
@@ -62,5 +95,19 @@
       <p>&copy; 2025 AiredHQ. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Tech Background Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+  <script>
+    VANTA.WAVES({
+      el: "#animated-background",
+      color: 0x1e73be,
+      shininess: 60,
+      waveHeight: 20,
+      waveSpeed: 1,
+      zoom: 1
+    });
+  </script>
 </body>
 </html>
