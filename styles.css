@@ -53,6 +53,19 @@ a {
   background-color: #e6e6e6;
 }
 
+/* Logo Styling */
+.logo {
+  width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
 /* Glass Sections */
 .glass {
   background: rgba(255, 255, 255, 0.05);
