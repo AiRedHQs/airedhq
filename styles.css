@@ -9,18 +9,18 @@ html {
 }
 body {
     font-family: 'Nunito', sans-serif;
-    color: #eee; /* Light text color on dark background */
+    color: #eee;
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: #0f0f0f; /* Dark background color */
+    background-color: #0f0f0f;
 }
 a {
     text-decoration: none;
-    color: #4ec8f0; /* Brighter primary color for better visibility */
+    color: #4ec8f0;
     transition: color 0.3s ease;
 }
 a:hover {
-    color: #a7f0fa; /* Lighter shade for hover */
+    color: #a7f0fa;
 }
 .container {
     width: 90%;
@@ -30,7 +30,7 @@ a:hover {
 }
 h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
-    color: #4ec8f0; /* Brighter heading color */
+    color: #4ec8f0;
     margin-bottom: 20px;
 }
 h1 {
@@ -44,7 +44,7 @@ h3 {
     font-size: 1.8rem;
 }
 p {
-    color: #ccc; /* Light paragraph text */
+    color: #ccc;
     margin-bottom: 15px;
 }
 
@@ -52,7 +52,7 @@ p {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: rgba(25, 25, 25, 0.8); /* Darker, slightly transparent navbar */
+    background-color: rgba(25, 25, 25, 0.8);
     padding: 15px 30px;
     z-index: 100;
     backdrop-filter: blur(10px);
@@ -86,12 +86,12 @@ p {
     text-align: center;
 }
 .hero .container {
-    background: rgba(25, 25, 25, 0.3); /* Darker glass background */
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1); /* Slightly lighter glass background for hero */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 60px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 25px rgba(0,0,0,0.5); /* More pronounced shadow */
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 .tagline {
     font-size: 1.8rem;
@@ -100,7 +100,7 @@ p {
 }
 .cta-button {
     display: inline-block;
-    background-color: #4ec8f0; /* Brighter CTA button */
+    background-color: #4ec8f0;
     color: #0f0f0f;
     padding: 15px 30px;
     border-radius: 30px;
@@ -115,12 +115,12 @@ p {
 
 /* Glass Section Containers */
 .glass {
-    background: rgba(25, 25, 25, 0.3); /* Darker glass background */
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1); /* Slightly lighter glass background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 40px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 25px rgba(0,0,0,0.5); /* More pronounced shadow */
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
     margin: 40px 20px;
 }
 
@@ -137,7 +137,7 @@ p {
     margin-top: 30px;
 }
 .service-card {
-    background-color: rgba(25, 25, 25, 0.5); /* Darker service cards */
+    background-color: rgba(25, 25, 25, 0.5);
     padding: 30px;
     border-radius: 12px;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -195,7 +195,7 @@ footer {
     padding: 30px 0;
     font-size: 0.9rem;
     color: #ccc;
-    background-color: rgba(25, 25, 25, 0.8); /* Darker, slightly transparent footer */
+    background-color: rgba(25, 25, 25, 0.8);
     backdrop-filter: blur(10px);
     margin-top: 60px;
 }
