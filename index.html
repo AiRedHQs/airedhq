@@ -1,136 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AiredHQ</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.png" type="image/png">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-
-  <!-- AOS Animations -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiredHQ - Innovating Realities</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #43cea2, #185a9d); /* Example gradient - adjust as needed */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 <body>
-  <!-- Animated Tech Background -->
-  <div id="animated-background"></div>
-
-  <!-- Sticky Navbar -->
-  <header class="navbar">
-    <div class="nav-container">
-      <img src="Logo 2X1 Transparent.png" alt="AiredHQ Logo" class="nav-logo" />
-      <nav class="nav-menu">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <p class="tagline">Innovating Realities. Building the Future.</p>
-      <a href="#contact" class="cta-button">Get in Touch</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about glass section-bg" id="about" data-aos="fade-up">
-    <div class="container">
-      <h2>About Us</h2>
-      <img src="Aboutus.svg" alt="About Illustration" class="section-img"/>
-      <p>
-        AiredHQ is a cutting-edge tech company specializing in immersive AR/VR solutions, innovative web & mobile applications, and future-driven consulting. We help businesses build smart, scalable products that elevate the user experience and drive growth.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services glass section-bg" id="services" data-aos="fade-up">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-grid">
-        <div class="service-card">
-          <h3>🕶️ AR/VR Development</h3>
-          <p>Create immersive environments and mixed reality experiences for real-world applications.</p>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="Logo 2X1 Transparent.png" alt="AiredHQ Logo" class="nav-logo" />
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="ar-vr.html">AR/VR Development</a>
+                <a href="mobile-app.html">Mobile App Development</a>
+                <a href="web-dev.html">Web Development</a>
+                <a href="consulting.html">Technology Consulting</a>
+                <a href="product-strategy.html">Product Strategy</a>
+                <a href="ui-ux.html">UI/UX Design</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <div class="service-card">
-          <h3>📱 Mobile App Development</h3>
-          <p>Build powerful cross-platform apps that scale and perform flawlessly on iOS and Android.</p>
+    </header>
+
+    <section class="hero glass">
+        <div class="container">
+            <h1>AiredHQ</h1>
+            <p class="tagline">Innovating Realities. Building the Future.</p>
+            <a href="#services-overview" class="cta-button">Explore Our Services</a>
         </div>
-        <div class="service-card">
-          <h3>💻 Web Development</h3>
-          <p>Develop responsive, high-performance websites tailored to your brand and business goals.</p>
+    </section>
+
+    <section id="about" class="glass section-bg">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>AiredHQ is a cutting-edge tech company specializing in immersive AR/VR solutions, innovative web & mobile applications, and future-driven consulting. We help businesses build smart, scalable products that elevate the user experience and drive growth.</p>
+            <p>Our team is equipped with a diverse range of skills and a passion for creating impactful digital experiences.</p>
+            </div>
+    </section>
+
+    <section id="services-overview" class="glass section-bg">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>We offer a comprehensive suite of services designed to help you navigate the digital landscape and bring your innovative ideas to life.</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3><a href="ar-vr.html" style="color: #1e73be;">AR/VR Development</a></h3>
+                    <p>Create immersive and interactive augmented and virtual reality experiences.</p>
+                </div>
+                <div class="service-card">
+                    <h3><a href="mobile-app.html" style="color: #1e73be;">Mobile App Development</a></h3>
+                    <p>Develop high-performance mobile applications for iOS and Android platforms.</p>
+                </div>
+                <div class="service-card">
+                    <h3><a href="web-dev.html" style="color: #1e73be;">Web Development</a></h3>
+                    <p>Build responsive and scalable websites and web applications.</p>
+                </div>
+                <div class="service-card">
+                    <h3><a href="consulting.html" style="color: #1e73be;">Technology Consulting</a></h3>
+                    <p>Provide expert guidance on technology strategy and implementation.</p>
+                </div>
+                <div class="service-card">
+                    <h3><a href="product-strategy.html" style="color: #1e73be;">Product Strategy</a></h3>
+                    <p>Define and validate your digital product vision and roadmap.</p>
+                </div>
+                <div class="service-card">
+                    <h3><a href="ui-ux.html" style="color: #1e73be;">UI/UX Design</a></h3>
+                    <p>Craft intuitive and visually appealing user interfaces and experiences.</p>
+                </div>
+            </div>
         </div>
-        <div class="service-card">
-          <h3>🧠 Technology Consulting</h3>
-          <p>Expert guidance to align technology with your business vision and objectives.</p>
+    </section>
+
+    <section id="contact" class="glass section-bg">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST"> <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-        <div class="service-card">
-          <h3>🚀 Product Strategy</h3>
-          <p>From idea to launch, our strategic approach helps shape and validate digital products.</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AiredHQ. All rights reserved.</p>
         </div>
-        <div class="service-card">
-          <h3>🎨 UI/UX Design</h3>
-          <p>Design intuitive user experiences and interfaces that people love to use.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact glass section-bg" id="contact" data-aos="fade-up">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form action="https://script.google.com/macros/s/AKfycbx2LyNdoCLY4J8qCiWy-g6IKOwlR7J9w4zCR3goMEXX8Vz61RlEuwWRA3bumq8DutPDTA/exec" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 AiredHQ. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    VANTA.WAVES({
-      el: "#animated-background",
-      color: 0x1e73be,
-      shininess: 60,
-      waveHeight: 20,
-      waveSpeed: 1,
-      zoom: 1
-    });
-
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq716a0443da91691aa1951684f813073532ef1bc15db4f7bd0b8b790d4b55fe38" defer></script>
+    </footer>
 </body>
 </html>
