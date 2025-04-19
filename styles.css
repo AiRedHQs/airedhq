@@ -12,11 +12,11 @@ body {
     color: #eee;
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: #0f0f0f;
+    background-color: #0f0f1c; /* Dark, professional background */
 }
 a {
     text-decoration: none;
-    color: #4ec8f0;
+    color: #4ec8f0; /* Bright primary color */
     transition: color 0.3s ease;
 }
 a:hover {
@@ -30,7 +30,7 @@ a:hover {
 }
 h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
-    color: #4ec8f0;
+    color: #4ec8f0; /* Bright heading color */
     margin-bottom: 20px;
 }
 h1 {
@@ -52,11 +52,11 @@ p {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: rgba(25, 25, 25, 0.8);
+    background-color: rgba(20, 20, 30, 0.9); /* Dark, slightly transparent navbar */
     padding: 15px 30px;
     z-index: 100;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 .nav-container {
     display: flex;
@@ -86,12 +86,12 @@ p {
     text-align: center;
 }
 .hero .container {
-    background: rgba(255, 255, 255, 0.1); /* Slightly lighter glass background for hero */
+    background: rgba(255, 255, 255, 0.15); /* More visible glass background */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 60px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6); /* More pronounced shadow */
 }
 .tagline {
     font-size: 1.8rem;
@@ -101,7 +101,7 @@ p {
 .cta-button {
     display: inline-block;
     background-color: #4ec8f0;
-    color: #0f0f0f;
+    color: #0f0f1c; /* Dark text on bright button */
     padding: 15px 30px;
     border-radius: 30px;
     font-weight: bold;
@@ -110,17 +110,17 @@ p {
 }
 .cta-button:hover {
     background-color: #a7f0fa;
-    color: #0f0f0f;
+    color: #0f0f1c;
 }
 
 /* Glass Section Containers */
 .glass {
-    background: rgba(255, 255, 255, 0.1); /* Slightly lighter glass background */
+    background: rgba(255, 255, 255, 0.15); /* More visible glass background */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 40px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
     margin: 40px 20px;
 }
 
@@ -132,26 +132,33 @@ p {
 /* Service Grid */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto)); /* Adjust for fewer items */
     gap: 30px;
     margin-top: 30px;
 }
 .service-card {
-    background-color: rgba(25, 25, 25, 0.5);
+    background-color: rgba(20, 20, 30, 0.7); /* Darker service cards */
     padding: 30px;
     border-radius: 12px;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center; /* Center the content within the cards */
 }
 .service-card h3 {
     margin-top: 0;
     margin-bottom: 15px;
+    font-size: 1.5rem; /* Slightly smaller heading */
 }
 .service-card p {
     font-size: 1rem;
 }
+.service-card a {
+    display: block; /* Make the entire card clickable if desired */
+    color: inherit; /* Inherit text color from parent */
+    text-decoration: none; /* Remove underline from links within cards */
+}
 .service-card:hover {
     transform: translateY(-5px);
-    background-color: rgba(40, 40, 40, 0.7);
+    background-color: rgba(30, 30, 40, 0.8);
 }
 
 /* Contact Form */
@@ -168,7 +175,7 @@ input, textarea {
     padding: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    background-color: rgba(40, 40, 40, 0.7);
+    background-color: rgba(30, 30, 40, 0.7);
     color: #eee;
     font-family: 'Nunito', sans-serif;
 }
@@ -177,7 +184,7 @@ textarea {
 }
 button[type="submit"] {
     background-color: #4ec8f0;
-    color: #0f0f0f;
+    color: #0f0f1c;
     padding: 15px 30px;
     border: none;
     border-radius: 30px;
@@ -195,7 +202,7 @@ footer {
     padding: 30px 0;
     font-size: 0.9rem;
     color: #ccc;
-    background-color: rgba(25, 25, 25, 0.8);
+    background-color: rgba(20, 20, 30, 0.9);
     backdrop-filter: blur(10px);
     margin-top: 60px;
 }
