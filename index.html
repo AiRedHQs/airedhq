@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AiRedHQ - Digital Solutions</title>
+    <title>AiRedHQ</title>
+    <!-- Nunito Font -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Nunito', sans-serif;
         }
         
         body {
-            background-color: #141414;
+            background-color: #0a0a0a;
             color: white;
             overflow-x: hidden;
         }
         
-        .container {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-        }
-        
+        /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -34,89 +32,443 @@
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
+            display: flex;
+            align-items: center;
         }
         
-        .logo span {
-            color: #3498db;
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-left: 10px;
+            background: linear-gradient(90deg, #3498db, #a3f962);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #a3f962;
         }
         
         .cta-button {
             background-color: transparent;
             color: white;
-            border: 1px solid white;
+            border: 2px solid #a3f962;
             border-radius: 50px;
             padding: 0.6rem 1.5rem;
             font-size: 1rem;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
         }
         
         .cta-button:hover {
-            background-color: white;
-            color: #141414;
+            background-color: #a3f962;
+            color: #0a0a0a;
         }
         
+        /* Hero Section */
         .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             padding: 0 5%;
-            margin-top: 2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
         .hero-title {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            line-height: 1.2;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #ffffff, #a3f962);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
-        .hero-text {
-            font-size: 1.1rem;
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            opacity: 0.8;
+        }
+        
+        /* First Curved Section */
+        .curved-section-1 {
+            position: relative;
+            padding: 8rem 0;
+            background-color: #0a0a0a;
+        }
+        
+        .curve-top-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #a3f962;
+            clip-path: ellipse(70% 70% at 50% 0%);
+        }
+        
+        .content-1 {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 5%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        
+        .section-text {
+            font-size: 1.2rem;
             line-height: 1.6;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
         
-        .wave {
+        /* Second Curved Section - Services */
+        .curved-section-2 {
+            position: relative;
+            padding: 8rem 0;
+            background-color: #0a0a0a;
+            margin-top: 6rem;
+        }
+        
+        .curve-middle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            background-color: #a3f962;
+            clip-path: ellipse(70% 50% at 50% 50%);
+            transform: translateY(-50%);
+        }
+        
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .services-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .service-card {
+            background-color: rgba(20, 20, 20, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border: 1px solid rgba(163, 249, 98, 0.2);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(163, 249, 98, 0.8);
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 200px;
+            background-color: #222;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-details {
+            padding: 2rem;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #a3f962;
+        }
+        
+        .service-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-link {
+            color: #a3f962;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+        
+        .service-link:hover {
+            opacity: 0.8;
+        }
+        
+        .service-link i {
+            margin-left: 8px;
+            font-size: 14px;
+        }
+        
+        /* Third Curved Section */
+        .curved-section-3 {
+            position: relative;
+            padding: 10rem 0 6rem;
+            background-color: #0a0a0a;
+            margin-top: 3rem;
+        }
+        
+        .curve-bottom {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 150px;
             background-color: #a3f962;
-            clip-path: ellipse(50% 60% at 50% 100%);
+            clip-path: ellipse(70% 70% at 50% 100%);
+        }
+        
+        .content-3 {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 5%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #3498db, #a3f962);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(163, 249, 98, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: #a3f962;
+            font-size: 18px;
+        }
+        
+        .social-link:hover {
+            background-color: #a3f962;
+            color: #0a0a0a;
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
-            .hero-text {
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section-text {
                 font-size: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .services-content {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <div class="logo"><span>Ai</span>RedHQ</div>
-            <button class="cta-button">Get in Touch</button>
-        </nav>
-        
-        <div class="hero">
-            <h1 class="hero-title">From Idea to Reality, Custom Apps, AR/VR Solutions, and World-Class Designs.</h1>
-            <p class="hero-text">
-                At AiRedHQ, we empower businesses, startups, and visionary brands by delivering tailor-made digital solutions, intuitive UI/UX designs, immersive AR/VR applications, and world-class web and mobile development services. Our expert team transforms ideas into powerful, scalable digital products that captivate users, enhance engagement, and drive measurable results. Whether you need custom app development, virtual reality experiences for education, or cutting-edge web platforms, AiRedHQ is your trusted partner for innovation and success.
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- Logo placeholder - replace with your actual logo -->
+            <div style="width: 40px; height: 40px; background-color: #3498db; border-radius: 8px;"></div>
+            <span class="logo-text">AiRedHQ</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">About</a>
+        </div>
+        <button class="cta-button">Get in Touch</button>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">From Idea to Reality, Custom Apps, AR/VR Solutions, and World-Class Designs</h1>
+        <p class="hero-subtitle">We empower businesses, startups, and visionary brands with tailor-made digital solutions that captivate users and drive measurable results</p>
+        <button class="cta-button">Explore Our Services</button>
+    </section>
+    
+    <!-- First Curved Section -->
+    <section class="curved-section-1">
+        <div class="curve-top-1"></div>
+        <div class="content-1">
+            <h2 class="section-title">Innovative Digital Solutions</h2>
+            <p class="section-text">
+                At AiRedHQ, we deliver cutting-edge technology solutions that transform businesses and create exceptional user experiences. Our team combines technical expertise with creative thinking to bring your ideas to life.
             </p>
         </div>
-        
-        <div class="wave"></div>
-    </div>
+    </section>
+    
+    <!-- Second Curved Section - Services -->
+    <section class="curved-section-2">
+        <div class="curve-middle"></div>
+        <div class="services-container">
+            <div class="services-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-text">Discover how we can help your business thrive in the digital landscape</p>
+            </div>
+            
+            <div class="services-content">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/600/400" alt="Web Development">
+                    </div>
+                    <div class="service-details">
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">Custom websites and applications built with the latest technologies and best practices for optimal performance and user experience.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/600/400" alt="AR/VR Solutions">
+                    </div>
+                    <div class="service-details">
+                        <h3 class="service-title">AR/VR Solutions</h3>
+                        <p class="service-description">Immersive augmented and virtual reality experiences that engage users and provide innovative solutions for various industries.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/600/400" alt="UI/UX Design">
+                    </div>
+                    <div class="service-details">
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-description">Intuitive and aesthetically pleasing user interfaces that enhance user experience and drive engagement with your digital products.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Third Curved Section -->
+    <section class="curved-section-3">
+        <div class="content-3">
+            <h2 class="section-title">Ready to Transform Your Digital Presence?</h2>
+            <p class="section-text">Let's collaborate to create something extraordinary that sets you apart from the competition.</p>
+            <button class="cta-button">Start a Project</button>
+        </div>
+        <div class="curve-bottom"></div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="footer-logo-text">AiRedHQ</span>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2025 AiRedHQ. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
