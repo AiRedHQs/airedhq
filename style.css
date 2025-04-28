@@ -234,6 +234,11 @@ body {
   z-index: 2;
 }
 
+.content-3 .cta-button {
+  margin-top: 2rem;
+}
+
+
 /* Footer */
 footer {
   padding: 3rem 5%;
