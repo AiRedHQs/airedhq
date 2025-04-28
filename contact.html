@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us | AiRedHQ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | AiRedHQ</title>
 
   <!-- Favicon -->
   <link rel="icon" href="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/favicon.png" type="image/png">
 
-  <!-- Fonts -->
+  <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body class="contact-page">
 
-  <!-- Header -->
-  <div id="header"></div>
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
 
   <!-- Contact Section -->
   <div class="contact-wrapper">
@@ -45,7 +47,7 @@
               f.src = 'https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1';
               f.style.border="none";
               f.style.width="100%";
-              f.style.minHeight="900px";
+              f.style.minHeight="800px";
               f.setAttribute("aria-label", 'Contact Us Form');
               var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
               d.appendChild(f);
@@ -56,10 +58,8 @@
                   var zf_ifrm_data = evntData.split("|");
                   if (zf_ifrm_data.length >= 2) {
                     var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
-                    var iframe = d.querySelector("iframe");
-                    if (iframe && iframe.style.height !== zf_ifrm_ht_nw) {
-                      iframe.style.height = zf_ifrm_ht_nw;
-                    }
+                    var iframe = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A").querySelector("iframe");
+                    if (iframe) iframe.style.height = zf_ifrm_ht_nw;
                   }
                 }
               }, false);
@@ -70,21 +70,16 @@
     </div>
   </div>
 
-  <!-- Load Header -->
+  <!-- Load Header dynamically -->
   <script>
     fetch('/header.html')
       .then(response => response.text())
       .then(data => {
-        document.getElementById('header').innerHTML = data;
+        document.getElementById('header-placeholder').innerHTML = data;
+        document.querySelector('.hamburger').addEventListener('click', function() {
+          document.getElementById('navLinks').classList.toggle('active');
+        });
       });
-  </script>
-
-  <!-- Toggle Mobile Menu -->
-  <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-    }
   </script>
 
 </body>
