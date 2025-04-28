@@ -8,11 +8,11 @@
   <!-- Favicon -->
   <link rel="icon" href="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/favicon.png" type="image/png">
 
-  <!-- Google Fonts Nunito (for full consistency) -->
+  <!-- Google Fonts Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Your website base styles */
+    /* Basic reset */
     * {
       margin: 0;
       padding: 0;
@@ -72,6 +72,21 @@
       background: #0a0a0a;
     }
 
+    .contact-form-wrapper {
+      background-color: #111111;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(163, 249, 98, 0.2);
+      margin: 20px;
+    }
+
+    .contact-form-wrapper iframe {
+      width: 100%;
+      border: none;
+      min-height: 800px;
+      background: transparent;
+    }
+
     @media (max-width: 768px) {
       .contact-wrapper {
         flex-direction: column;
@@ -100,53 +115,55 @@
     <p><strong>Address:</strong> 123 Innovation Street, Tech City</p>
   </div>
 
-  <!-- Right: Zoho Form (Dynamic JavaScript Embed) -->
+  <!-- Right: Zoho Form -->
   <div class="contact-form">
-    <div id="zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></div>
-    <script type="text/javascript">
-    (function() {
-      try {
-        var f = document.createElement("iframe");
-        f.src = 'https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1';
-        f.style.border="none";
-        f.style.width="100%";
-        f.style.transition="all 0.5s ease";
-        f.setAttribute("aria-label", 'Contact Us');
+    <div class="contact-form-wrapper">
+      <div id="zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></div>
+      <script type="text/javascript">
+      (function() {
+        try {
+          var f = document.createElement("iframe");
+          f.src = 'https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1';
+          f.style.border="none";
+          f.style.width="100%";
+          f.style.transition="all 0.5s ease";
+          f.setAttribute("aria-label", 'Contact Us');
 
-        var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
-        d.appendChild(f);
+          var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
+          d.appendChild(f);
 
-        window.addEventListener('message', function (event) {
-          var evntData = event.data;
-          if (evntData && typeof evntData === "string") {
-            var zf_ifrm_data = evntData.split("|");
-            if (zf_ifrm_data.length === 2 || zf_ifrm_data.length === 3) {
-              var zf_perma = zf_ifrm_data[0];
-              var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
-              var iframe = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A").getElementsByTagName("iframe")[0];
-              if ((iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0) {
-                var prevIframeHeight = iframe.style.height;
-                var zf_tout = false;
-                if (zf_ifrm_data.length === 3) {
-                  iframe.scrollIntoView();
-                  zf_tout = true;
-                }
-                if (prevIframeHeight !== zf_ifrm_ht_nw) {
-                  if (zf_tout) {
-                    setTimeout(function() {
+          window.addEventListener('message', function (event) {
+            var evntData = event.data;
+            if (evntData && typeof evntData === "string") {
+              var zf_ifrm_data = evntData.split("|");
+              if (zf_ifrm_data.length === 2 || zf_ifrm_data.length === 3) {
+                var zf_perma = zf_ifrm_data[0];
+                var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
+                var iframe = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A").getElementsByTagName("iframe")[0];
+                if ((iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0) {
+                  var prevIframeHeight = iframe.style.height;
+                  var zf_tout = false;
+                  if (zf_ifrm_data.length === 3) {
+                    iframe.scrollIntoView();
+                    zf_tout = true;
+                  }
+                  if (prevIframeHeight !== zf_ifrm_ht_nw) {
+                    if (zf_tout) {
+                      setTimeout(function() {
+                        iframe.style.height = zf_ifrm_ht_nw;
+                      }, 500);
+                    } else {
                       iframe.style.height = zf_ifrm_ht_nw;
-                    }, 500);
-                  } else {
-                    iframe.style.height = zf_ifrm_ht_nw;
+                    }
                   }
                 }
               }
             }
-          }
-        }, false);
-      } catch(e) {}
-    })();
-    </script>
+          }, false);
+        } catch(e) {}
+      })();
+      </script>
+    </div>
   </div>
 
 </div>
