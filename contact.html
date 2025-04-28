@@ -1,77 +1,386 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Contact Us | AiRedHQ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* Reset and basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/favicon.png" type="image/png">
+body {
+  background-color: #0a0a0a;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  background-color: #0a0a0a;
+  z-index: 10;
+  position: relative;
+}
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="/style.css">
-</head>
+.logo img {
+  height: 50px;
+}
 
-<body class="contact-page">
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
 
-  <!-- Header Placeholder -->
-  <div id="header"></div>
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
 
-  <!-- Contact Section -->
-  <section class="contact-wrapper">
-    <div class="contact-info">
-      <h2>Write Back to Us</h2>
-      <p>We are here to help with any queries you may have, whether it's related to our services, support, or just a simple hello!</p>
+.nav-links a:hover {
+  color: #a3f962;
+}
 
-      <h3>For HR related queries</h3>
-      <p>hr@airedhq.com</p>
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
 
-      <h3>For general queries</h3>
-      <p>info@airedhq.com</p>
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 90vh;
+  padding: 0 5%;
+  overflow: hidden;
+}
 
-      <h3>Customer Support Hours</h3>
-      <p>Monday to Friday: 9 AM - 6 PM</p>
-      <p>We aim to respond to all inquiries within 24 hours.</p>
-    </div>
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+}
 
-    <div class="contact-form">
-      <div class="contact-form-wrapper">
-        <iframe id="contact-iframe" src="https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1" frameborder="0" scrolling="no" aria-label="Contact Us Form"></iframe>
-      </div>
-    </div>
-  </section>
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 
-  <!-- Load header dynamically -->
-  <script>
-    fetch('/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      });
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
 
-    // Automatically resize iframe height
-    window.addEventListener('message', function(event) {
-      var evntData = event.data;
-      if (typeof evntData === 'string' && evntData.includes('|')) {
-        var iframeData = evntData.split('|');
-        if (iframeData.length > 1) {
-          var iframe = document.getElementById('contact-iframe');
-          iframe.style.height = (parseInt(iframeData[1], 10) + 15) + 'px';
-        }
-      }
-    }, false);
-  </script>
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #ffffff, #a3f962);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  <!-- Toggle Mobile Menu -->
-  <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-    }
-  </script>
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  opacity: 0.8;
+}
 
-</body>
-</html>
+/* CTA Button */
+.cta-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #a3f962;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite;
+}
+
+.cta-button:hover {
+  background-color: #a3f962;
+  color: #0a0a0a;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(163, 249, 98, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(163, 249, 98, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(163, 249, 98, 0);
+  }
+}
+
+/* Services Section */
+.curved-section-2 {
+  position: relative;
+  padding: 8rem 0;
+  background-color: #0a0a0a;
+  margin-top: 6rem;
+}
+
+.curve-middle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #a3f962;
+  clip-path: ellipse(75% 45% at 50% 0%);
+  z-index: 1;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  position: relative;
+  z-index: 2;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.service-card {
+  background-color: rgba(20, 20, 20, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(163, 249, 98, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(163, 249, 98, 0.8);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-details {
+  padding: 2rem;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #a3f962;
+}
+
+.service-description {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.service-link {
+  color: #a3f962;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.service-link i {
+  margin-left: 8px;
+}
+
+/* Contact Section */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 80px auto;
+  background: #0a0a0a;
+  border-radius: 8px;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.contact-info {
+  flex: 1 1 40%;
+  background: #0a0a0a;
+  color: white;
+  padding: 0;
+}
+
+.contact-info h2,
+.contact-info h3 {
+  color: #a3f962;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contact-info p {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  flex: 1 1 55%;
+  background: #0a0a0a;
+}
+
+.contact-form-wrapper {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(163, 249, 98, 0.2);
+}
+
+.contact-form-wrapper iframe {
+  width: 100%;
+  min-height: 900px;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  padding: 3rem 5%;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(163, 249, 98, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a3f962;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #a3f962;
+  color: #0a0a0a;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0a0a0a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: white;
+    text-align: right;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .services-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+}
+
+/* Hide CTA on Contact Page */
+body.contact-page .cta-button {
+  display: none;
+}
