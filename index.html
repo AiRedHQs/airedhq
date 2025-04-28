@@ -33,10 +33,11 @@
 
   <!-- Hero Section with Background Video -->
   <section id="home" class="hero">
-    <video autoplay muted loop playsinline class="background-video">
-  <source src="https://raw.githubusercontent.com/AiRedHQs/airedhq/9c4475adba1900e0902241e9080119c67709b6c3/3761542-hd_1280_720_50fps.mp4" type="video/mp4">
+   <video id="background-video" autoplay muted playsinline class="background-video">
+  <source id="background-source" src="https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background1.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
+
 
 
     <div class="overlay"></div>
@@ -125,6 +126,25 @@
       </p>
     </div>
   </footer>
+<script>
+const videoList = [
+  "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background1.mp4",
+  "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background2.mp4",
+  "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background3.mp4",
+  "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background4.mp4"
+];
+
+let videoIndex = 0;
+const video = document.getElementById('background-video');
+const source = document.getElementById('background-source');
+
+video.addEventListener('ended', function() {
+  videoIndex = (videoIndex + 1) % videoList.length;
+  source.src = videoList[videoIndex];
+  video.load();
+  video.play();
+});
+</script>
 
 </body>
 </html>
