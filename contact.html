@@ -6,41 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
       background: #f5f5f5;
       padding: 20px;
-      margin: 0;
     }
-    .contact-container {
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
       background: white;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 700px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
     .contact-info {
-      margin-bottom: 20px;
+      flex: 1 1 30%;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 40px 20px;
+      box-sizing: border-box;
     }
     .contact-info h2 {
-      margin-top: 0;
       font-size: 24px;
+      margin-bottom: 20px;
       text-align: center;
     }
     .contact-info p {
-      margin: 8px 0;
-      text-align: center;
+      margin: 10px 0;
       font-size: 16px;
+      text-align: center;
+    }
+    .contact-form {
+      flex: 1 1 70%;
+      padding: 20px;
+      box-sizing: border-box;
     }
     iframe {
       width: 100%;
       border: none;
       min-height: 700px;
     }
-    @media (max-width: 600px) {
-      .contact-container {
-        padding: 15px;
-        margin: 10px;
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+      .contact-info, .contact-form {
+        flex: 1 1 100%;
+      }
+      .contact-info {
+        text-align: center;
       }
     }
   </style>
@@ -48,9 +64,9 @@
 
 <body>
 
-<div class="contact-container">
-  
-  <!-- Contact Information Section -->
+<div class="contact-wrapper">
+
+  <!-- Left Contact Info Section -->
   <div class="contact-info">
     <h2>Get in Touch</h2>
     <p><strong>Email:</strong> hello@airedhq.com</p>
@@ -58,12 +74,14 @@
     <p><strong>Address:</strong> 123 Innovation Street, Tech City</p>
   </div>
 
-  <!-- Zoho Form Embedded Section -->
-  <iframe aria-label="Contact Us" frameborder="0" src="https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></iframe>
+  <!-- Right Zoho Form Section -->
+  <div class="contact-form">
+    <iframe aria-label="Contact Us" src="https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></iframe>
+  </div>
 
 </div>
 
-<!-- JavaScript to auto-resize iframe -->
+<!-- Script to auto adjust iframe height -->
 <script>
 window.addEventListener('message', function(event) {
   if (event.origin.includes('zoho.com')) {
