@@ -12,147 +12,141 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
-  <!-- Header Placeholder -->
-  <div id="header-placeholder"></div>
+<!-- Dynamic Header -->
+<div id="header"></div>
 
-  <!-- Hero Section with Background Video -->
-  <section id="home" class="hero">
-    <video id="background-video" autoplay muted playsinline class="background-video">
-      <source id="background-source" src="https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background1.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-      <h1 class="hero-title">Turning Your Vision into Reality</h1>
-      <p class="hero-subtitle">From mobile apps to immersive VR experiences: we craft digital products users love.</p>
-      <button class="cta-button" onclick="location.href='#services'">Explore Services</button>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="curved-section-2">
-    <div class="curve-middle"></div>
-    <div class="services-container">
-      <div class="services-header">
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-text">Empowering businesses with cutting-edge technology and design.</p>
-      </div>
-
-      <div class="services-content">
-        <!-- Web Development -->
-        <div class="service-card">
-          <div class="service-image">
-            <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/b7c8c07a341fe8059946a5420ad93be2cfdfde3f/WebDev.jpg" alt="Web Development">
-          </div>
-          <div class="service-details">
-            <h3 class="service-title">Web Development</h3>
-            <p class="service-description">Responsive, high-performance websites tailored to your brand and business goals.</p>
-            <a href="webdev.html" class="service-link">Explore More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <!-- AR/VR Solutions -->
-        <div class="service-card">
-          <div class="service-image">
-            <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/b7c8c07a341fe8059946a5420ad93be2cfdfde3f/ARVR.jpg" alt="AR/VR Solutions">
-          </div>
-          <div class="service-details">
-            <h3 class="service-title">AR/VR Solutions</h3>
-            <p class="service-description">Immersive augmented and virtual reality experiences that engage users and innovate industries.</p>
-            <a href="ar-vr.html" class="service-link">Explore More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <!-- UI/UX Design -->
-        <div class="service-card">
-          <div class="service-image">
-            <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/b7c8c07a341fe8059946a5420ad93be2cfdfde3f/UIUX.jpg" alt="UI/UX Design">
-          </div>
-          <div class="service-details">
-            <h3 class="service-title">UI/UX Design</h3>
-            <p class="service-description">Intuitive and visually stunning designs that provide seamless digital experiences for users.</p>
-            <a href="ui-ux.html" class="service-link">Explore More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="curved-section-3">
-    <div class="content-3">
-      <h2 class="section-title">Ready to Transform Your Digital Presence?</h2>
-      <p class="section-text">Let's collaborate to create something extraordinary that sets you apart from the competition.</p>
-      <button class="cta-button">Start a Project</button>
-    </div>
-    <div class="curve-bottom"></div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Footer Logo">
-      </div>
-      <div class="social-links">
-        <a href="https://facebook.com" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://x.com/airedhq" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/airedhq" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-      <p class="copyright">
-        © 2025 AiRedHQ. Built with passion. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
-  <!-- Header Load + Hamburger Function -->
-  <script>
-    fetch('/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-        document.querySelector('.hamburger').addEventListener('click', function() {
-          document.getElementById('navLinks').classList.toggle('active');
-        });
-      });
-  </script>
-
-  <!-- Background Video Control -->
-  <script>
-    const videoList = [
-      "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background1.mp4",
-      "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background2.mp4",
-      "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background3.mp4",
-      "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background4.mp4"
-    ];
-
-    let videoIndex = 0;
-    const video = document.getElementById('background-video');
-    const source = document.getElementById('background-source');
-
-    video.addEventListener('ended', function() {
-      videoIndex = (videoIndex + 1) % videoList.length;
-      source.src = videoList[videoIndex];
-      video.load();
-      video.play();
+<script>
+  fetch('/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
     });
-  </script>
+</script>
 
-  <!-- Zoho SalesIQ -->
-  <script>
-    window.$zoho = window.$zoho || {};
-    $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
-  </script>
-  <script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq716a0443da91691aa1951684f813073532ef1bc15db4f7bd0b8b790d4b55fe38" defer></script>
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <video id="background-video" autoplay muted loop playsinline class="background-video">
+    <source id="background-source" src="https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background1.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">Turning Your Vision into Reality</h1>
+    <p class="hero-subtitle">From mobile apps to immersive VR experiences : we craft digital products users love.</p>
+    <button class="cta-button" onclick="location.href='#services'">Explore Services</button>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="curved-section-2">
+  <div class="curve-middle"></div>
+  <div class="services-container">
+    <div class="services-header">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-text">Empowering businesses with cutting-edge technology and design.</p>
+    </div>
+
+    <div class="services-content">
+      <!-- Web Development -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/b7c8c07a341fe8059946a5420ad93be2cfdfde3f/WebDev.jpg" alt="Web Development">
+        </div>
+        <div class="service-details">
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-description">Responsive, high-performance websites tailored to your brand and business goals.</p>
+          <a href="webdev.html" class="service-link">Explore More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- AR/VR Solutions -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/b7c8c07a341fe8059946a5420ad93be2cfdfde3f/ARVR.jpg" alt="AR/VR Solutions">
+        </div>
+        <div class="service-details">
+          <h3 class="service-title">AR/VR Solutions</h3>
+          <p class="service-description">Immersive augmented and virtual reality experiences that engage users and innovate industries.</p>
+          <a href="ar-vr.html" class="service-link">Explore More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- UI/UX Design -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/b7c8c07a341fe8059946a5420ad93be2cfdfde3f/UIUX.jpg" alt="UI/UX Design">
+        </div>
+        <div class="service-details">
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-description">Intuitive and visually stunning designs that provide seamless digital experiences for users.</p>
+          <a href="ui-ux.html" class="service-link">Explore More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="curved-section-3">
+  <div class="content-3">
+    <h2 class="section-title">Ready to Transform Your Digital Presence?</h2>
+    <p class="section-text">Let's collaborate to create something extraordinary that sets you apart from the competition.</p>
+    <button class="cta-button">Start a Project</button>
+  </div>
+  <div class="curve-bottom"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Footer Logo">
+    </div>
+    <div class="social-links">
+      <a href="https://facebook.com" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/airedhq" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/airedhq" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <p>© 2025 AiRedHQ. Built with passion. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+const videoList = [
+  "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background1.mp4",
+  "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background2.mp4",
+  "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background3.mp4",
+  "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background4.mp4"
+];
+
+let videoIndex = 0;
+const video = document.getElementById('background-video');
+const source = document.getElementById('background-source');
+
+video.addEventListener('ended', function() {
+  videoIndex = (videoIndex + 1) % videoList.length;
+  source.src = videoList[videoIndex];
+  video.load();
+  video.play();
+});
+</script>
+
+<script>
+window.$zoho = window.$zoho || {};
+$zoho.salesiq = $zoho.salesiq || {ready: function() {}};
+</script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq716a0443da91691aa1951684f813073532ef1bc15db4f7bd0b8b790d4b55fe38" defer></script>
 
 </body>
 </html>
