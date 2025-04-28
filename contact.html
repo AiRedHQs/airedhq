@@ -27,6 +27,52 @@
       padding: 20px;
     }
 
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      position: relative;
+      z-index: 10;
+      background-color: #0a0a0a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      padding: 6px 0;
+      text-align: right;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #a3f962;
+    }
+
+    .cta-button {
+      background-color: transparent;
+      color: white;
+      border: 2px solid #a3f962;
+      border-radius: 50px;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #a3f962;
+      color: #0a0a0a;
+    }
+
+    /* Contact Page */
     .contact-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -112,13 +158,14 @@
   </style>
 </head>
 
-<body class="contact-page"> <!-- Added contact-page class here -->
+<body class="contact-page"> <!-- Add this class for page-specific changes -->
 
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
     </div>
-  
+
     <div class="nav-links">
       <a href="https://airedhq.com/">Home</a>
       <a href="https://airedhq.com/services.html">Services</a>
@@ -129,26 +176,20 @@
     <button class="cta-button" id="cta-button" onclick="location.href='#contact'">Get in Touch</button>
   </nav>
 
+  <!-- Contact Content -->
   <div class="contact-wrapper">
-
-    <!-- Left: Contact Info -->
     <div class="contact-info">
       <h2>Write Back to Us</h2>
       <p>We are here to help with any queries you may have, whether it's related to our services, support, or just a simple hello!</p>
-    
       <h3>For HR related queries</h3>
       <p>hr@airedhq.com</p>
-
       <h3>For general queries</h3>
       <p>info@airedhq.com</p>
-
       <h3>Customer Support Hours</h3>
       <p>Monday to Friday: 9 AM - 6 PM</p>
-
       <p>We aim to respond to all inquiries within 24 hours.</p>
     </div>
 
-    <!-- Right: Zoho Form -->
     <div class="contact-form">
       <div class="contact-form-wrapper">
         <div id="zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></div>
@@ -198,7 +239,6 @@
         </script>
       </div>
     </div>
-
   </div>
 
 </body>
