@@ -39,8 +39,7 @@
 
     <div class="contact-form">
       <div class="contact-form-wrapper">
-        <iframe src="https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1"
-          style="border:none; width:100%; min-height:800px;" frameborder="0" aria-label="Contact Form"></iframe>
+        <iframe id="contact-iframe" src="https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1" frameborder="0" scrolling="no" aria-label="Contact Us Form"></iframe>
       </div>
     </div>
   </section>
@@ -52,6 +51,18 @@
       .then(data => {
         document.getElementById('header').innerHTML = data;
       });
+
+    // Automatically resize iframe height
+    window.addEventListener('message', function(event) {
+      var evntData = event.data;
+      if (typeof evntData === 'string' && evntData.includes('|')) {
+        var iframeData = evntData.split('|');
+        if (iframeData.length > 1) {
+          var iframe = document.getElementById('contact-iframe');
+          iframe.style.height = (parseInt(iframeData[1], 10) + 15) + 'px';
+        }
+      }
+    }, false);
   </script>
 
   <!-- Toggle Mobile Menu -->
