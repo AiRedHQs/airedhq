@@ -27,51 +27,6 @@
       padding: 20px;
     }
 
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 5%;
-      position: relative;
-      z-index: 10;
-      background-color: #0a0a0a;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      color: white;
-      padding: 6px 0;
-      text-align: right;
-      font-size: 16px;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover {
-      color: #a3f962;
-    }
-
-    .cta-button {
-      background-color: transparent;
-      color: white;
-      border: 2px solid #a3f962;
-      border-radius: 50px;
-      padding: 0.6rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #a3f962;
-      color: #0a0a0a;
-    }
-
     /* Contact Page */
     .contact-wrapper {
       display: flex;
@@ -158,23 +113,10 @@
   </style>
 </head>
 
-<body class="contact-page"> <!-- Add this class for page-specific changes -->
+<body class="contact-page"> <!-- This class is important -->
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
-    </div>
-
-    <div class="nav-links">
-      <a href="https://airedhq.com/">Home</a>
-      <a href="https://airedhq.com/services.html">Services</a>
-      <a href="https://airedhq.com/portfolio.html">Portfolio</a>
-      <a href="https://airedhq.com/about.html">About</a>
-    </div>
-
-    <button class="cta-button" id="cta-button" onclick="location.href='#contact'">Get in Touch</button>
-  </nav>
+  <!-- Header Placeholder -->
+  <div id="header"></div>
 
   <!-- Contact Content -->
   <div class="contact-wrapper">
@@ -240,6 +182,23 @@
       </div>
     </div>
   </div>
+
+  <!-- Load header.html dynamically -->
+  <script>
+    fetch('/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+  <!-- Toggle hamburger menu script (needed because header loads dynamically) -->
+  <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  </script>
 
 </body>
 </html>
