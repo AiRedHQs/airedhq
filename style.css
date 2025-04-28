@@ -384,3 +384,22 @@ footer p {
 body.contact-page .cta-button {
   display: none;
 }
+
+/* Fix Section Alignment */
+.curved-section-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10rem 5% 6rem;
+  background-color: #0a0a0a;
+  position: relative;
+}
+
+.content-3 {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 2;
+}
