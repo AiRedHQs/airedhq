@@ -11,126 +11,27 @@
   <!-- Google Fonts Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- 👇👇 ADD THIS to bring back your site's CSS styling -->
+  <!-- Link to your main style.css (important) -->
   <link rel="stylesheet" href="/style.css">
-
-
-  <style>
-    /* Basic reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #0a0a0a;
-      color: white;
-      font-family: 'Nunito', sans-serif;
-      overflow-x: hidden;
-      padding: 20px;
-    }
-
-    /* Contact Page */
-    .contact-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
-      background: #0a0a0a;
-      border-radius: 8px;
-    }
-
-    .contact-info {
-      flex: 1 1 30%;
-      background: #0a0a0a;
-      color: white;
-      padding: 40px 20px;
-      box-sizing: border-box;
-      border-right: 1px solid rgba(163, 249, 98, 0.2);
-    }
-
-    .contact-info h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #a3f962;
-      font-weight: 700;
-    }
-
-    .contact-info h3 {
-      font-size: 20px;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      text-align: center;
-      color: #a3f962;
-      font-weight: 600;
-    }
-
-    .contact-info p {
-      margin: 8px 0;
-      text-align: center;
-      font-size: 16px;
-      opacity: 0.8;
-    }
-
-    .contact-form {
-      flex: 1 1 70%;
-      padding: 20px;
-      box-sizing: border-box;
-      background: #0a0a0a;
-    }
-
-    .contact-form-wrapper {
-      background-color: #111111;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(163, 249, 98, 0.2);
-      margin: 20px;
-    }
-
-    .contact-form-wrapper iframe {
-      width: 100%;
-      border: none;
-      min-height: 800px;
-      background: transparent;
-    }
-
-    /* Hide Get in Touch button only on contact page */
-    body.contact-page .cta-button {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .contact-wrapper {
-        flex-direction: column;
-      }
-      .contact-info, .contact-form {
-        flex: 1 1 100%;
-      }
-      .contact-info {
-        text-align: center;
-        border-right: none;
-        border-bottom: 1px solid rgba(163, 249, 98, 0.2);
-      }
-    }
-  </style>
 </head>
 
-<body class="contact-page"> <!-- This class is important -->
+<body class="contact-page"> <!-- Add class for hiding CTA button -->
 
-  <!-- Header Placeholder -->
+  <!-- Header (loaded dynamically) -->
   <div id="header"></div>
 
-  <!-- Contact Content -->
-  <div class="contact-wrapper">
+  <!-- Contact Section -->
+  <div class="contact-wrapper" style="padding: 20px;">
     <div class="contact-info">
       <h2>Write Back to Us</h2>
       <p>We are here to help with any queries you may have, whether it's related to our services, support, or just a simple hello!</p>
+
       <h3>For HR related queries</h3>
       <p>hr@airedhq.com</p>
+
       <h3>For general queries</h3>
       <p>info@airedhq.com</p>
+
       <h3>Customer Support Hours</h3>
       <p>Monday to Friday: 9 AM - 6 PM</p>
       <p>We aim to respond to all inquiries within 24 hours.</p>
@@ -146,8 +47,9 @@
             f.src = 'https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1';
             f.style.border="none";
             f.style.width="100%";
+            f.style.minHeight="800px";
             f.style.transition="all 0.5s ease";
-            f.setAttribute("aria-label", 'Contact Us');
+            f.setAttribute("aria-label", 'Contact Us Form');
 
             var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
             d.appendChild(f);
@@ -187,7 +89,7 @@
     </div>
   </div>
 
-  <!-- Load header.html dynamically -->
+  <!-- Load the header dynamically -->
   <script>
     fetch('/header.html')
       .then(response => response.text())
@@ -196,7 +98,7 @@
       });
   </script>
 
-  <!-- Toggle hamburger menu script (needed because header loads dynamically) -->
+  <!-- Mobile menu toggle function -->
   <script>
   function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
