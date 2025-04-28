@@ -19,18 +19,21 @@
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
-    </div>
-   <div class="nav-links">
-  <a href="https://airedhq.com/">Home</a>
-  <a href="https://airedhq.com/services.html">Services</a>
-  <a href="https://airedhq.com/portfolio.html">Portfolio</a>
-  <a href="https://airedhq.com/about.html">About</a>
-</div>
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
+  </div>
 
-    <button class="cta-button" onclick="location.href='#contact'">Get in Touch</button>
-  </nav>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+  <div class="nav-links">
+    <a href="https://airedhq.com/">Home</a>
+    <a href="https://airedhq.com/services.html">Services</a>
+    <a href="https://airedhq.com/portfolio.html">Portfolio</a>
+    <a href="https://airedhq.com/about.html">About</a>
+  </div>
+
+  <button class="cta-button" onclick="location.href='#contact'">Get in Touch</button>
+</nav>
 
   <!-- Hero Section with Background Video -->
   <section id="home" class="hero">
@@ -149,5 +152,13 @@ video.addEventListener('ended', function() {
 });
 </script>
 <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq716a0443da91691aa1951684f813073532ef1bc15db4f7bd0b8b790d4b55fe38" defer></script>
+
+<script>
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+</script>
+
 </body>
 </html>
