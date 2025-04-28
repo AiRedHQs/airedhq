@@ -5,17 +5,21 @@
     </a>
   </div>
 
-  <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/services.html">Services</a>
-    <a href="/portfolio.html">Portfolio</a>
-    <a href="/about.html">About</a>
+  <div class="nav-links" id="navLinks">
+    <a href="https://airedhq.com/">Home</a>
+    <a href="https://airedhq.com/services.html">Services</a>
+    <a href="https://airedhq.com/portfolio.html">Portfolio</a>
+    <a href="https://airedhq.com/about.html">About</a>
   </div>
 
-  <button class="cta-button" onclick="location.href='#contact'">Get in Touch</button>
+  <button class="cta-button" onclick="location.href='/#contact'">Get in Touch</button>
 
-  <!-- CLEAN Hamburger Button (FontAwesome Icon) -->
-  <button class="hamburger" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </button>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </nav>
+
+<script>
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+}
+</script>
