@@ -43,6 +43,7 @@ body {
   color: #a3f962;
 }
 
+/* CTA Button */
 .cta-button {
   background-color: transparent;
   color: white;
@@ -74,6 +75,16 @@ body {
   100% {
     box-shadow: 0 0 0 0 rgba(163, 249, 98, 0);
   }
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
 }
 
 /* Hero Section */
@@ -305,44 +316,3 @@ footer p {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #0a0a0a;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    color: white;
-    text-align: right;
-    padding: 10px 0;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .services-content {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-}
-
-/* Hide CTA button on contact.html */
-body.contact-page .cta-button {
-  display: none;
-}
