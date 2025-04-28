@@ -237,24 +237,21 @@ body {
 .contact-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  max-width: 1000px;
-  margin: 100px auto;
+  max-width: 1200px;
+  margin: 80px auto;
   background: #0a0a0a;
   border-radius: 8px;
-  padding: 40px 20px;
-  gap: 30px;
+  padding: 0 20px;
+  gap: 20px;
 }
 
 .contact-info {
   flex: 1 1 40%;
   background: #0a0a0a;
   color: white;
-  padding: 20px 10px 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 0;
 }
 
 .contact-info h2,
@@ -273,7 +270,6 @@ body {
 .contact-form {
   flex: 1 1 55%;
   background: #0a0a0a;
-  padding: 20px 0 20px 10px;
 }
 
 .contact-form-wrapper {
@@ -285,9 +281,10 @@ body {
 
 .contact-form-wrapper iframe {
   width: 100%;
-  min-height: 800px;
+  min-height: 900px;
   border: none;
   background: transparent;
+  overflow: hidden;
 }
 
 /* Footer */
@@ -379,7 +376,7 @@ footer p {
 
   .contact-wrapper {
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 0 10px;
   }
 }
 
