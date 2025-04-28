@@ -13,91 +13,6 @@
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="/style.css">
-
-  <!-- Custom Contact Page Styles -->
-  <style>
-    /* Contact-specific styles */
-    .contact-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 100px auto 50px auto;
-      background: #0a0a0a;
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .contact-info {
-      flex: 1 1 30%;
-      background: #0a0a0a;
-      color: white;
-      padding: 40px 20px;
-      border-right: 1px solid rgba(163, 249, 98, 0.2);
-    }
-
-    .contact-info h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #a3f962;
-      font-weight: 700;
-    }
-
-    .contact-info h3 {
-      font-size: 20px;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      text-align: center;
-      color: #a3f962;
-      font-weight: 600;
-    }
-
-    .contact-info p {
-      margin: 8px 0;
-      text-align: center;
-      font-size: 16px;
-      opacity: 0.8;
-    }
-
-    .contact-form {
-      flex: 1 1 70%;
-      padding: 20px;
-      background: #0a0a0a;
-    }
-
-    .contact-form-wrapper {
-      background-color: #111;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(163, 249, 98, 0.2);
-      margin: 20px;
-    }
-
-    .contact-form-wrapper iframe {
-      width: 100%;
-      border: none;
-      min-height: 800px;
-      background: transparent;
-    }
-
-    /* Hide CTA on Contact Page */
-    body.contact-page .cta-button {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .contact-wrapper {
-        flex-direction: column;
-      }
-      .contact-info, .contact-form {
-        flex: 1 1 100%;
-      }
-      .contact-info {
-        border-right: none;
-        border-bottom: 1px solid rgba(163, 249, 98, 0.2);
-      }
-    }
-  </style>
 </head>
 
 <body class="contact-page">
@@ -105,7 +20,7 @@
   <!-- Header Placeholder -->
   <div id="header"></div>
 
-  <!-- Contact Section -->
+  <!-- Contact Content -->
   <div class="contact-wrapper">
     <div class="contact-info">
       <h2>Write Back to Us</h2>
@@ -130,9 +45,9 @@
             try {
               var f = document.createElement("iframe");
               f.src = 'https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1';
-              f.style.border="none";
-              f.style.width="100%";
-              f.style.minHeight="800px";
+              f.style.border = "none";
+              f.style.width = "100%";
+              f.style.minHeight = "800px";
               f.setAttribute("aria-label", 'Contact Us Form');
               var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
               d.appendChild(f);
