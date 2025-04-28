@@ -415,3 +415,12 @@ footer p {
   }
 }
 
+/* Default - Show Get in Touch button */
+.cta-button {
+  display: block;
+}
+
+/* Hide Get in Touch button on contact.html page */
+body.contact-page .cta-button {
+  display: none;
+}
