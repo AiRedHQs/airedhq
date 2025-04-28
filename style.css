@@ -1,4 +1,4 @@
-/* Reset and basics */
+/* Reset and Basics */
 * {
   margin: 0;
   padding: 0;
@@ -15,11 +15,11 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px 5%;
+  align-items: center;
+  padding: 1rem 5%;
   background-color: #0a0a0a;
-  z-index: 10;
+  z-index: 100;
   position: relative;
 }
 
@@ -34,8 +34,8 @@ body {
 
 .nav-links a {
   color: white;
-  text-decoration: none;
   font-size: 16px;
+  text-decoration: none;
   font-weight: 600;
 }
 
@@ -43,13 +43,34 @@ body {
   color: #a3f962;
 }
 
-.hamburger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
+.cta-button {
+  background: transparent;
   color: white;
+  border: 2px solid #a3f962;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.cta-button:hover {
+  background-color: #a3f962;
+  color: #0a0a0a;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(163, 249, 98, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(163, 249, 98, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(163, 249, 98, 0);
+  }
 }
 
 /* Hero Section */
@@ -108,46 +129,11 @@ body {
   opacity: 0.8;
 }
 
-/* CTA Button */
-.cta-button {
-  background-color: transparent;
-  color: white;
-  border: 2px solid #a3f962;
-  border-radius: 50px;
-  padding: 0.6rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  animation: pulse 2s infinite;
-}
-
-.cta-button:hover {
-  background-color: #a3f962;
-  color: #0a0a0a;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(163, 249, 98, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(163, 249, 98, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(163, 249, 98, 0);
-  }
-}
-
-/* Services Section */
+/* Curved Section */
 .curved-section-2 {
   position: relative;
-  padding: 8rem 0;
-  background-color: #0a0a0a;
-  margin-top: 6rem;
+  background: #0a0a0a;
+  padding: 8rem 5% 0 5%;
 }
 
 .curve-middle {
@@ -162,11 +148,10 @@ body {
 }
 
 .services-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 5%;
   position: relative;
   z-index: 2;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .services-header {
@@ -180,11 +165,12 @@ body {
   gap: 3rem;
 }
 
+/* Service Card */
 .service-card {
-  background-color: rgba(20, 20, 20, 0.7);
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(163, 249, 98, 0.2);
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(163, 249, 98, 0.2);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -193,14 +179,9 @@ body {
   border-color: rgba(163, 249, 98, 0.8);
 }
 
-.service-image {
-  width: 100%;
-  height: 200px;
-}
-
 .service-image img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -210,103 +191,72 @@ body {
 
 .service-title {
   font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
   color: #a3f962;
+  font-weight: 700;
 }
 
 .service-description {
   font-size: 1rem;
   opacity: 0.8;
-  margin-bottom: 1.5rem;
+  margin: 1rem 0;
 }
 
 .service-link {
-  color: #a3f962;
-  font-weight: 700;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-
-.service-link i {
-  margin-left: 8px;
+  font-weight: 700;
+  color: #a3f962;
 }
 
 /* Contact Section */
-.contact-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 80px auto;
+.curved-section-3 {
+  position: relative;
   background: #0a0a0a;
-  border-radius: 8px;
-  padding: 0 20px;
-  gap: 20px;
+  padding: 8rem 5% 5rem 5%;
 }
 
-.contact-info {
-  flex: 1 1 40%;
-  background: #0a0a0a;
-  color: white;
-  padding: 0;
-}
-
-.contact-info h2,
-.contact-info h3 {
-  color: #a3f962;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.contact-info p {
-  font-size: 16px;
-  opacity: 0.8;
-  margin-bottom: 15px;
-}
-
-.contact-form {
-  flex: 1 1 55%;
-  background: #0a0a0a;
-}
-
-.contact-form-wrapper {
-  background-color: #111;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(163, 249, 98, 0.2);
-}
-
-.contact-form-wrapper iframe {
+.curve-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  min-height: 900px;
-  border: none;
-  background: transparent;
-  overflow: hidden;
+  height: 120px;
+  background: #a3f962;
+  clip-path: ellipse(75% 45% at 50% 100%);
+  z-index: 1;
+}
+
+.content-3 {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.content-3 .cta-button {
+  margin-top: 2rem;
 }
 
 /* Footer */
 footer {
   padding: 3rem 5%;
+  background: #0a0a0a;
   text-align: center;
 }
 
 .footer-content {
   max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: auto;
 }
 
 .footer-logo img {
   height: 40px;
+  margin-bottom: 1rem;
 }
 
 .social-links {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
@@ -315,25 +265,26 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(163, 249, 98, 0.1);
+  background: rgba(163, 249, 98, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #a3f962;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .social-link:hover {
-  background-color: #a3f962;
+  background: #a3f962;
   color: #0a0a0a;
 }
 
 footer p {
   font-size: 0.9rem;
   opacity: 0.7;
+  margin-top: 1rem;
 }
 
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -352,16 +303,6 @@ footer p {
     display: flex;
   }
 
-  .nav-links a {
-    color: white;
-    text-align: right;
-    padding: 10px 0;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
   .services-content {
     grid-template-columns: 1fr;
   }
@@ -373,33 +314,4 @@ footer p {
   .hero-subtitle {
     font-size: 1.2rem;
   }
-
-  .contact-wrapper {
-    flex-direction: column;
-    padding: 0 10px;
-  }
-}
-
-/* Hide CTA on Contact Page */
-body.contact-page .cta-button {
-  display: none;
-}
-
-/* Fix Section Alignment */
-.curved-section-3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10rem 5% 6rem;
-  background-color: #0a0a0a;
-  position: relative;
-}
-
-.content-3 {
-  max-width: 800px;
-  width: 100%;
-  padding: 0 20px;
-  z-index: 2;
 }
