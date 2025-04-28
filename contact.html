@@ -1,4 +1,4 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -91,6 +91,11 @@
       background: transparent;
     }
 
+    /* Hide Get in Touch button only on contact page */
+    body.contact-page .cta-button {
+      display: none;
+    }
+
     @media (max-width: 768px) {
       .contact-wrapper {
         flex-direction: column;
@@ -107,94 +112,94 @@
   </style>
 </head>
 
-<body>
-<nav class="navbar">
-  <div class="logo">
-    <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
-  </div>
+<body class="contact-page"> <!-- Added contact-page class here -->
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
+    </div>
   
-  <div class="nav-links">
-    <a href="https://airedhq.com/">Home</a>
-    <a href="https://airedhq.com/services.html">Services</a>
-    <a href="https://airedhq.com/portfolio.html">Portfolio</a>
-    <a href="https://airedhq.com/about.html">About</a>
-  </div>
+    <div class="nav-links">
+      <a href="https://airedhq.com/">Home</a>
+      <a href="https://airedhq.com/services.html">Services</a>
+      <a href="https://airedhq.com/portfolio.html">Portfolio</a>
+      <a href="https://airedhq.com/about.html">About</a>
+    </div>
 
-  <button class="cta-button" id="cta-button" onclick="location.href='#contact'">Get in Touch</button>
-</nav>
+    <button class="cta-button" id="cta-button" onclick="location.href='#contact'">Get in Touch</button>
+  </nav>
 
-<div class="contact-wrapper">
+  <div class="contact-wrapper">
 
-  <!-- Left: Contact Info -->
-  <div class="contact-info">
-  <h2>Write Back to Us</h2>
-  <p>We are here to help with any queries you may have, whether it's related to our services, support, or just a simple hello!</p>
-  
-  <h3>For HR related queries</h3>
-  <p>hr@airedhq.com</p>
+    <!-- Left: Contact Info -->
+    <div class="contact-info">
+      <h2>Write Back to Us</h2>
+      <p>We are here to help with any queries you may have, whether it's related to our services, support, or just a simple hello!</p>
+    
+      <h3>For HR related queries</h3>
+      <p>hr@airedhq.com</p>
 
-  <h3>For general queries</h3>
-  <p>info@airedhq.com</p>
+      <h3>For general queries</h3>
+      <p>info@airedhq.com</p>
 
-  <h3>Customer Support Hours</h3>
-  <p>Monday to Friday: 9 AM - 6 PM</p>
+      <h3>Customer Support Hours</h3>
+      <p>Monday to Friday: 9 AM - 6 PM</p>
 
-  <p>We aim to respond to all inquiries within 24 hours.</p>
-</div>
+      <p>We aim to respond to all inquiries within 24 hours.</p>
+    </div>
 
+    <!-- Right: Zoho Form -->
+    <div class="contact-form">
+      <div class="contact-form-wrapper">
+        <div id="zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></div>
+        <script type="text/javascript">
+        (function() {
+          try {
+            var f = document.createElement("iframe");
+            f.src = 'https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1';
+            f.style.border="none";
+            f.style.width="100%";
+            f.style.transition="all 0.5s ease";
+            f.setAttribute("aria-label", 'Contact Us');
 
-  <!-- Right: Zoho Form -->
-  <div class="contact-form">
-    <div class="contact-form-wrapper">
-      <div id="zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></div>
-      <script type="text/javascript">
-      (function() {
-        try {
-          var f = document.createElement("iframe");
-          f.src = 'https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1';
-          f.style.border="none";
-          f.style.width="100%";
-          f.style.transition="all 0.5s ease";
-          f.setAttribute("aria-label", 'Contact Us');
+            var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
+            d.appendChild(f);
 
-          var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
-          d.appendChild(f);
-
-          window.addEventListener('message', function (event) {
-            var evntData = event.data;
-            if (evntData && typeof evntData === "string") {
-              var zf_ifrm_data = evntData.split("|");
-              if (zf_ifrm_data.length === 2 || zf_ifrm_data.length === 3) {
-                var zf_perma = zf_ifrm_data[0];
-                var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
-                var iframe = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A").getElementsByTagName("iframe")[0];
-                if ((iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0) {
-                  var prevIframeHeight = iframe.style.height;
-                  var zf_tout = false;
-                  if (zf_ifrm_data.length === 3) {
-                    iframe.scrollIntoView();
-                    zf_tout = true;
-                  }
-                  if (prevIframeHeight !== zf_ifrm_ht_nw) {
-                    if (zf_tout) {
-                      setTimeout(function() {
+            window.addEventListener('message', function (event) {
+              var evntData = event.data;
+              if (evntData && typeof evntData === "string") {
+                var zf_ifrm_data = evntData.split("|");
+                if (zf_ifrm_data.length === 2 || zf_ifrm_data.length === 3) {
+                  var zf_perma = zf_ifrm_data[0];
+                  var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
+                  var iframe = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A").getElementsByTagName("iframe")[0];
+                  if ((iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0) {
+                    var prevIframeHeight = iframe.style.height;
+                    var zf_tout = false;
+                    if (zf_ifrm_data.length === 3) {
+                      iframe.scrollIntoView();
+                      zf_tout = true;
+                    }
+                    if (prevIframeHeight !== zf_ifrm_ht_nw) {
+                      if (zf_tout) {
+                        setTimeout(function() {
+                          iframe.style.height = zf_ifrm_ht_nw;
+                        }, 500);
+                      } else {
                         iframe.style.height = zf_ifrm_ht_nw;
-                      }, 500);
-                    } else {
-                      iframe.style.height = zf_ifrm_ht_nw;
+                      }
                     }
                   }
                 }
               }
-            }
-          }, false);
-        } catch(e) {}
-      })();
-      </script>
+            }, false);
+          } catch(e) {}
+        })();
+        </script>
+      </div>
     </div>
-  </div>
 
-</div>
+  </div>
 
 </body>
 </html>
