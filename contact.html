@@ -20,8 +20,8 @@
   <!-- Header Placeholder -->
   <div id="header"></div>
 
-  <!-- Contact Content -->
-  <div class="contact-wrapper">
+  <!-- Contact Section -->
+  <section class="contact-wrapper">
     <div class="contact-info">
       <h2>Write Back to Us</h2>
       <p>We are here to help with any queries you may have, whether it's related to our services, support, or just a simple hello!</p>
@@ -39,38 +39,13 @@
 
     <div class="contact-form">
       <div class="contact-form-wrapper">
-        <div id="zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></div>
-        <script type="text/javascript">
-          (function() {
-            try {
-              var f = document.createElement("iframe");
-              f.src = 'https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1';
-              f.style.border = "none";
-              f.style.width = "100%";
-              f.style.minHeight = "800px";
-              f.setAttribute("aria-label", 'Contact Us Form');
-              var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
-              d.appendChild(f);
-
-              window.addEventListener('message', function(event) {
-                var evntData = event.data;
-                if (evntData && typeof evntData === "string") {
-                  var zf_ifrm_data = evntData.split("|");
-                  if (zf_ifrm_data.length >= 2) {
-                    var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
-                    var iframe = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A").querySelector("iframe");
-                    if (iframe) iframe.style.height = zf_ifrm_ht_nw;
-                  }
-                }
-              }, false);
-            } catch (e) {}
-          })();
-        </script>
+        <iframe src="https://forms.zohopublic.in/airedhqgm1/form/ContactUs/formperma/ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A?zf_rszfm=1"
+          style="border:none; width:100%; min-height:800px;" frameborder="0" aria-label="Contact Form"></iframe>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Load the header dynamically -->
+  <!-- Load header dynamically -->
   <script>
     fetch('/header.html')
       .then(response => response.text())
@@ -79,7 +54,7 @@
       });
   </script>
 
-  <!-- Toggle mobile menu -->
+  <!-- Toggle Mobile Menu -->
   <script>
     function toggleMenu() {
       const navLinks = document.querySelector('.nav-links');
