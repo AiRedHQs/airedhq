@@ -4,38 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | AiRedHQ</title>
-
   <!-- Favicon -->
   <link rel="icon" href="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/favicon.png" type="image/png">
-
   <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body class="contact-page">
-
-  <!-- Header Placeholder -->
-  <div id="header-placeholder"></div>
+  <!-- Header - directly in page -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/">
+        <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
+      </a>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/about.html">About</a>
+    </div>
+    <a href="#contact" class="cta-button">Get in Touch</a>
+    <!-- Hamburger for Mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
 
   <!-- Contact Section -->
   <div class="contact-wrapper">
     <div class="contact-info">
       <h2>Write Back to Us</h2>
       <p>We are here to help with any queries you may have, whether it's related to our services, support, or just a simple hello!</p>
-
       <h3>For HR related queries</h3>
       <p>hr@airedhq.com</p>
-
       <h3>For general queries</h3>
       <p>info@airedhq.com</p>
-
       <h3>Customer Support Hours</h3>
       <p>Monday to Friday: 9 AM - 6 PM</p>
       <p>We aim to respond to all inquiries within 24 hours.</p>
     </div>
-
     <div class="contact-form">
       <div class="contact-form-wrapper">
         <div id="zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A"></div>
@@ -50,7 +57,6 @@
               f.setAttribute("aria-label", 'Contact Us Form');
               var d = document.getElementById("zf_div_ycgnHSSC0GOg5OPK9Lk6KY9wOeSyBlRYpViSPWxXi7A");
               d.appendChild(f);
-
               window.addEventListener('message', function(event) {
                 var evntData = event.data;
                 if (evntData && typeof evntData === "string") {
@@ -69,24 +75,12 @@
     </div>
   </div>
 
-  <!-- Load Header dynamically -->
+  <!-- Script for hamburger menu -->
   <script>
-    fetch('/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-
-        // Add the hamburger toggle functionality after header loads
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.getElementById('navLinks');
-
-        if (hamburger && navLinks) {
-          hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-          });
-        }
-      });
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
   </script>
-
 </body>
 </html>
