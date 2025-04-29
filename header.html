@@ -4,16 +4,20 @@
       <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
     </a>
   </div>
-
   <div class="nav-links" id="navLinks">
     <a href="/">Home</a>
     <a href="/services.html">Services</a>
     <a href="/portfolio.html">Portfolio</a>
     <a href="/about.html">About</a>
   </div>
-
   <a href="#contact" class="cta-button">Get in Touch</a>
-
   <!-- Hamburger for Mobile -->
-  <div class="hamburger">☰</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </nav>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+</script>
