@@ -14,24 +14,119 @@
 
   <!-- Main Styles -->
   <link rel="stylesheet" href="/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      background-color: #0a0a0a;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #a3f962;
+    }
+
+    .cta-button {
+      background-color: transparent;
+      color: white;
+      border: 2px solid #a3f962;
+      border-radius: 50px;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      background-color: #a3f962;
+      color: #0a0a0a;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(163, 249, 98, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(163, 249, 98, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(163, 249, 98, 0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0a0a0a;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 200px;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Header (copied from portfolio.html) -->
+<!-- Navbar -->
 <nav class="navbar">
   <div class="logo">
     <a href="/">
       <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/main/Logo.png" alt="AiRedHQ Logo">
     </a>
   </div>
-  <div class="nav-links" id="navLinks">
+  <div class="nav-links">
     <a href="/">Home</a>
     <a href="/services.html">Services</a>
     <a href="/portfolio.html">Portfolio</a>
     <a href="/about.html">About</a>
   </div>
   <a href="/contact.html" class="cta-button">Get in Touch</a>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
 </nav>
 
 <!-- Hero Section -->
@@ -60,7 +155,6 @@
     </div>
 
     <div class="services-content">
-      <!-- Web Development -->
       <div class="service-card">
         <div class="service-image">
           <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/refs/heads/main/WebDev.jpg" alt="Web Development">
@@ -72,7 +166,6 @@
         </div>
       </div>
 
-      <!-- AR/VR Solutions -->
       <div class="service-card">
         <div class="service-image">
           <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/b7c8c07a341fe8059946a5420ad93be2cfdfde3f/ARVR.jpg" alt="AR/VR Solutions">
@@ -84,7 +177,6 @@
         </div>
       </div>
 
-      <!-- UI/UX Design -->
       <div class="service-card">
         <div class="service-image">
           <img src="https://raw.githubusercontent.com/AiRedHQs/airedhq/refs/heads/main/UIUX.jpg" alt="UI/UX Design">
@@ -126,7 +218,7 @@
   </div>
 </footer>
 
-<!-- Video Playlist Script -->
+<!-- Video Playlist -->
 <script>
   const videoList = [
     "https://raw.githubusercontent.com/AiRedHQs/airedhq/fb6dfaa79775e10520b28d928e69c38bb6cd461d/Background1.mp4",
@@ -147,15 +239,15 @@
   });
 </script>
 
-<!-- Hamburger Toggle Script -->
+<!-- Hamburger Script -->
 <script>
   function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
+    const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
   }
 </script>
 
-<!-- Zoho SalesIQ -->
+<!-- Zoho Chat -->
 <script>
   window.$zoho = window.$zoho || {};
   $zoho.salesiq = $zoho.salesiq || {ready: function() {}};
